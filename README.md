@@ -21,7 +21,7 @@ For ongoing design work, start with
 
 ## Current Deployment
 
-- Production deployment: `dpl_7DPriyRsJZLjHaqqxgTQGQwNRwfS`
+- Production deployment: `dpl_DTeMckyBoJecQ9ANFwUbzAwH6xZR`
 - Stable checked URL: `https://www.benbe.org`
 - DNS: `benbe.org` and `www.benbe.org` point to `76.76.21.21`
 
