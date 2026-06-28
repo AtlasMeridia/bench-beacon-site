@@ -19,11 +19,12 @@ For ongoing design work, start with
 
 `chat.benbe.org` stays on the VPS behind Cloudflare Access.
 
-## Current Deployment
+## Deployment Verification
 
-- Production deployment: `dpl_DTeMckyBoJecQ9ANFwUbzAwH6xZR`
 - Stable checked URL: `https://www.benbe.org`
 - DNS: `benbe.org` and `www.benbe.org` point to `76.76.21.21`
+- Latest production deployment changes on push; verify with
+  `vercel ls bench-beacon --scope kenny-lius-projects-3a563320`.
 
 Deploy manually from the repo root:
 
