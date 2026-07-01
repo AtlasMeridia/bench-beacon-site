@@ -1,0 +1,446 @@
+/* ═══════════════════════════════════════════════════════════════
+   BENCH & BEACON — Colors & Type
+   Source of truth for all design tokens across Bench & Beacon
+   surfaces. Light mode is the default.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Fonts — loaded from Google Fonts CDN */
+/* Six families. Weights trimmed to the set actually used across the system —
+   add a weight back to this @import before reaching for it. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&family=IBM+Plex+Mono:ital,wght@0,400;0,500&family=Noto+Serif+TC:wght@400;500&display=swap');
+
+:root {
+  /* ─────────────────────────────────────────────────────────────
+     COLOR SYSTEM — warm, desaturated, paper-and-ink
+     ───────────────────────────────────────────────────────────── */
+
+  /* Navy Scale — cool-warm desaturated, reads as near-black */
+  --navy-950: #08090c;  /* Deepest navy, near-black */
+  --navy-900: #0e1318;  /* Primary dark background */
+  --navy-800: #161c24;  /* Elevated surfaces, cards */
+  --navy-700: #1e2630;  /* Secondary elements, borders (dark) */
+  --navy-600: #2a3440;  /* Tertiary elements, border-color (dark) */
+  --navy-500: #3d4754;  /* Muted elements, disabled */
+  --navy-400: #5c6672;  /* Placeholder text, text-muted (light) */
+  --navy-300: #7d8690;  /* Subtle text, captions */
+
+  /* Cream Scale — muted, paper-like warm off-whites */
+  --cream-50:  #f8f6f1;  /* Purest cream, raised cards — bg-elevated (light) */
+  --cream-100: #f3f0ea;  /* Page surface — bg-primary (light) */
+  --cream-200: #eae6de;  /* Recessed wells — bg-deep (light): panel bars, footers, code */
+  --cream-300: #dfd9ce;  /* Tertiary light, hover states */
+  --cream-400: #d0c8bb;  /* Borders (light) */
+  --cream-500: #b8b0a2;  /* Muted cream, disabled (light) */
+
+  /* Steel Scale — cool desaturated brushed-aluminum (Bench · wrench · craft).
+     The structural counterweight to brass: panel chrome, rails, dividers. */
+  --steel-50:  #e8ebec;  /* Lightest steel highlight */
+  --steel-100: #cdd2d4;  /* Light chrome, steel text on dark */
+  --steel-200: #aab1b5;  /* Muted steel, secondary chrome */
+  --steel-300: #878f94;  /* Mid steel, dividers, knurling */
+  --steel-400: #656d72;  /* Steel borders, panel seams */
+  --steel-500: #474d51;  /* Deep steel, pressed/active chrome */
+
+  /* Brass Accent — the one warm signal color (antique brass, machined not printed) */
+  --accent-light: #d8b06a;  /* Hover states, inline code */
+  --accent:       #b98f44;  /* Primary brass — the signal */
+  --accent-dark:  #9a7536;  /* Text on light bg */
+  --accent-deep:  #79592a;  /* Active states */
+
+  /* Brass aliases — name the material directly (Beacon · telescope · signal) */
+  --brass-light: var(--accent-light);
+  --brass:       var(--accent);
+  --brass-dark:  var(--accent-dark);
+  --brass-deep:  var(--accent-deep);
+
+  /* Metallic sheen — RESERVED for the seal & instrument fittings ONLY.
+     Never a UI fill; the no-gradients-in-product rule still holds. */
+  --sheen: linear-gradient(135deg, #ecca84 0%, #b98f44 42%, #856631 68%, #d4ac63 100%);  /* @kind color */
+
+  /* Knurled fitting — steel cross-hatch for dividers, handles, panel seams */
+  --knurl: repeating-linear-gradient(135deg, var(--steel-300) 0 1px, transparent 1px 5px);
+
+  /* Semantic — muted, never saturated */
+  --success: #6a9a70;  /* Muted green */
+  --error:   #b05454;  /* Muted red */
+  --warning: var(--accent);
+
+  /* ─────────────────────────────────────────────────────────────
+     TYPOGRAPHY
+     ───────────────────────────────────────────────────────────── */
+
+  /* Families */
+  --font-display: 'Cormorant Garamond', Georgia, serif;  /* workhorse display serif: article/section titles, drop caps, deck & in-product headings */
+  --font-wordmark: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;  /* the brand display serif (roman): the wordmark (set 600) + large marketing/brand headlines (.brand-headline, 500) */
+  --font-body:    'Lora', Georgia, serif;
+  --font-ui:      'DM Sans', system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, monospace;
+  --font-chinese: 'Noto Serif TC', serif;
+
+  /* Type scale (rem, designed against 16px root) */
+  --text-xs:   0.75rem;   /* 12px — legal, footnotes */
+  --text-sm:   0.875rem;  /* 14px — captions, labels */
+  --text-base: 1.125rem;  /* 18px — UI text */
+  --text-body: 1.25rem;   /* 20px — primary reading size */
+  --text-lg:   1.5rem;    /* 24px — lead paragraphs */
+  --text-xl:   1.75rem;   /* 28px — subheadings */
+  --text-2xl:  2.25rem;   /* 36px — section titles */
+  --text-3xl:  3rem;      /* 48px — page titles */
+  --text-4xl:  4rem;      /* 64px — hero headlines */
+  --text-5xl:  5.5rem;    /* 88px — display */
+
+  /* Line heights */
+  --leading-tight:   1.05;  /* Display text */
+  --leading-snug:    1.25;  /* Headlines */
+  --leading-normal:  1.5;   /* UI text */
+  --leading-relaxed: 1.6;   /* Body prose */
+
+  /* Letter spacing */
+  --tracking-tight: -0.02em;
+  --tracking-body:  -0.01em;
+
+  /* ─────────────────────────────────────────────────────────────
+     SPACING — 4px base
+     ───────────────────────────────────────────────────────────── */
+  --space-1:  0.25rem;  /* 4px  */
+  --space-2:  0.5rem;   /* 8px  */
+  --space-3:  0.75rem;  /* 12px */
+  --space-4:  1rem;     /* 16px */
+  --space-5:  1.5rem;   /* 24px */
+  --space-6:  2rem;     /* 32px */
+  --space-8:  3rem;     /* 48px */
+  --space-10: 4rem;     /* 64px */
+  --space-12: 6rem;     /* 96px */
+  --space-16: 8rem;     /* 128px */
+  --space-20: 10rem;    /* 160px */
+
+  /* ─────────────────────────────────────────────────────────────
+     LAYOUT
+     ───────────────────────────────────────────────────────────── */
+  --width-prose: 38rem;  /* 608px — article body */
+  --width-wide:  52rem;  /* 832px — wide content */
+  --width-full:  80rem;  /* 1280px — max container */
+
+  /* ─────────────────────────────────────────────────────────────
+     MOTION — fast = micro-interactions, base = standard, slow = emphasis
+     ───────────────────────────────────────────────────────────── */
+  --transition-fast: 150ms ease;  /* @kind other */
+  --transition-base: 300ms ease;  /* @kind other */
+  --transition-slow: 600ms cubic-bezier(0.16, 1, 0.3, 1);  /* @kind other */
+  --ease-out-expo:   cubic-bezier(0.16, 1, 0.3, 1);  /* @kind other */
+
+  /* ─────────────────────────────────────────────────────────────
+     EFFECTS
+     ───────────────────────────────────────────────────────────── */
+  --border-radius-sm: 4px;
+  --border-radius:    6px;
+  --border-radius-lg: 12px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow:    0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LIGHT — the Bench & Beacon master surface (what :root resolves to by default)
+   ═══════════════════════════════════════════════════════════════ */
+:root,
+[data-theme="light"] {
+  /* Elevation ladder: recessed well (deep) < page (primary) < raised card (elevated). */
+  --bg-primary:     var(--cream-100);  /* the page */
+  --bg-deep:        var(--cream-200);  /* recessed: panel bars, footers, code wells */
+  --bg-elevated:    var(--cream-50);   /* raised: cards lift off the page */
+  --text-primary:   var(--navy-700);
+  --text-secondary: var(--navy-600);
+  --text-muted:     var(--navy-400);
+  --border-color:   var(--cream-400);
+
+  --body-weight:   400;      /* full weight on paper */
+  --body-tracking: 0;
+  /* accent-deep, not accent-dark: AA-legible brass for links/labels on cream (≥4.5:1) */
+  --accent-text:   var(--accent-deep);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   DARK — the lamp-lit-room opt-in
+   ═══════════════════════════════════════════════════════════════ */
+[data-theme="dark"] {
+  --bg-primary:     var(--navy-900);
+  --bg-deep:        var(--navy-950);
+  --bg-elevated:    var(--navy-800);
+  --text-primary:   #d5cab8;  /* warm off-white */
+  --text-secondary: #bfb4a4;
+  --text-muted:     #9a8f80;
+  --border-color:   var(--navy-600);
+
+  --body-weight:   300;      /* lighter on dark — serifs hold up */
+  --body-tracking: 0.01em;   /* slight opening on dark */
+  --accent-text:   var(--accent);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SURFACE MODES — a light master surface plus three contextual modes. Set
+   data-mode on any container; independent of data-theme. Default (no mode)
+   is the MASTER identity: cream paper, navy ink, brass — the site & system.
+     observatory  · after-dark · the same room at night (decks, title cards, YouTube)
+     workbench    · product    · operational steel chrome (BenBe, portals, demos)
+     field-notes  · publish    · cream paper with receipts (essays, archives)
+   House rule: product panels keep their dark workbench chrome even when
+   embedded in the light master site — a lit instrument set on paper.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Workshop Observatory — the after-dark atmosphere. Dark navy, cream serif, brass rules. Decks, title cards, hero moments — not the site default. */
+[data-mode="observatory"] {
+  --bg-primary:     var(--navy-950);
+  --bg-deep:        #050608;
+  --bg-elevated:    var(--navy-900);
+  --text-primary:   #e7ddca;
+  --text-secondary: #bfb4a4;
+  --text-muted:     #9a8f80;
+  --border-color:   var(--navy-700);
+  --accent-text:    var(--accent);
+  --body-weight:    300;
+  --body-tracking:  0.01em;
+}
+
+/* Agent Workbench — product mode. Panel-based, steel chrome, brass signal. */
+[data-mode="workbench"] {
+  --bg-primary:     var(--navy-900);
+  --bg-deep:        var(--navy-950);
+  --bg-elevated:    var(--navy-800);
+  --panel:          var(--navy-800);   /* operational panels */
+  --chrome:         var(--steel-400);  /* seams, rails, dividers */
+  --chrome-text:    var(--steel-100);  /* labels on chrome */
+  --text-primary:   #d5cab8;
+  --text-secondary: #bfb4a4;
+  --text-muted:     var(--steel-300);
+  --border-color:   var(--navy-600);
+  --accent-text:    var(--accent);
+  --body-weight:    300;
+  --body-tracking:  0.01em;
+}
+
+/* Civic Field Notes — publishing mode. Cream paper, navy ink, brass annotation. */
+[data-mode="field-notes"] {
+  /* Brighter paper than the master surface; same elevation logic (deep < page < elevated). */
+  --bg-primary:     var(--cream-50);   /* page */
+  --bg-deep:        var(--cream-200);  /* recessed wells */
+  --bg-elevated:    #fffdf8;           /* raised cards, near-white */
+  --text-primary:   var(--navy-700);
+  --text-secondary: var(--navy-600);
+  --text-muted:     var(--navy-400);
+  --border-color:   var(--cream-400);
+  --accent-text:    var(--accent-deep);  /* AA-legible brass on cream */
+  --body-weight:    400;
+  --body-tracking:  0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SEMANTIC TEXT STYLES — use these, not raw tokens
+   ═══════════════════════════════════════════════════════════════ */
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+}
+
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-3xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+}
+
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-2xl);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+}
+
+h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-xl);
+  line-height: var(--leading-snug);
+  color: var(--text-primary);
+}
+
+h4, .h4 {
+  font-family: var(--font-ui);
+  font-weight: 500;
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--text-primary);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-style: italic;
+  font-size: var(--text-5xl);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-primary);
+}
+
+/* Brand headline — Playfair Display (roman) as the big display moment on
+   marketing & brand-collateral surfaces (the hero, a short section head). A
+   high-contrast modern serif; pairs against Cormorant's softer italic without
+   collision. Unlike the old script it wraps cleanly to multiple lines. */
+.brand-headline {
+  font-family: var(--font-wordmark);
+  font-weight: 500;
+  font-style: normal;
+  font-size: var(--text-4xl);
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+.brand-headline .brass { color: var(--accent); }
+
+.prose,
+.body-text {
+  font-family: var(--font-body);
+  font-weight: var(--body-weight);
+  font-size: var(--text-body);
+  line-height: var(--leading-relaxed);
+  letter-spacing: var(--body-tracking);
+  color: var(--text-secondary);
+}
+
+.lead {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--text-lg);
+  line-height: var(--leading-relaxed);
+  color: var(--text-secondary);
+}
+
+.ui-label,
+.meta {
+  font-family: var(--font-ui);
+  font-weight: 400;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+}
+
+.caption {
+  font-family: var(--font-ui);
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+code, .code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--accent-light);
+  background: var(--bg-elevated);
+  padding: 0.15em 0.4em;
+  border-radius: var(--border-radius-sm);
+}
+
+a {
+  color: var(--accent-text);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  text-underline-offset: 0.15em;
+  transition: text-decoration-color var(--transition-fast);
+}
+a:hover { text-decoration-color: var(--accent); }
+
+blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: var(--space-5);
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border-color);
+  margin: var(--space-8) 0;
+}
+
+/* Drop cap — hallmark Bench & Beacon treatment */
+.drop-cap::first-letter {
+  font-family: var(--font-display);
+  font-size: 4.5em;
+  float: left;
+  line-height: 0.85;
+  padding: 0.05em 0.1em 0 0;
+  color: var(--accent);
+  font-weight: 400;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   INSTRUMENT DETAILS — structural brass/steel motifs.
+   Small, structural, never skeuomorphic.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Ruled divider — brass hairline with major + minor ticks (a measuring scale) */
+.tick-rule {
+  position: relative;
+  height: 15px;
+  border-bottom: 1px solid var(--accent);
+  margin: var(--space-3) 0 var(--space-8);
+}
+.tick-rule::before {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px;
+  background: repeating-linear-gradient(90deg, var(--accent) 0 1px, transparent 1px 11px);
+  opacity: 0.45;
+}
+.tick-rule::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 14px;
+  background: repeating-linear-gradient(90deg, var(--accent) 0 1px, transparent 1px 66px);
+  opacity: 0.8;
+}
+
+/* Knurled fitting — steel cross-hatch strip */
+.knurl {
+  background: var(--knurl);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+}
+
+/* Provenance rail — the "receipts" device. Mono source tags, timestamps, traces. */
+.prov-rail { display: flex; flex-direction: column; gap: var(--space-2); }
+.prov-tag {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--font-mono); font-size: var(--text-xs);
+  color: var(--text-secondary); letter-spacing: 0.02em;
+}
+.prov-tag::before {
+  content: ""; width: 6px; height: 6px; border-radius: 999px;
+  background: var(--accent); flex: none;
+}
+
+/* Seal — the telescope × wrench mark, quiet in a corner. Brass sheen + monogram fallback. */
+.seal {
+  width: 64px; height: 64px; border-radius: 999px;
+  background: var(--sheen); border: 2px solid var(--accent-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-style: italic; font-weight: 600;
+  font-size: 26px; color: var(--navy-950);
+  box-shadow: inset 0 1px 3px rgba(255,255,255,0.35), inset 0 -2px 5px rgba(0,0,0,0.4);
+}
+
+/* Selection */
+::selection {
+  background: rgba(185, 143, 68, 0.3);
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}

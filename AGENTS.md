@@ -1,5 +1,5 @@
 ---
-last_updated: 2026-06-27
+last_updated: 2026-07-01
 ---
 
 # Bench & Beacon Site
@@ -33,7 +33,22 @@ Do not commit:
 - internal VPS/debug notes.
 
 Master and collaboration assets live in the Bench & Beacon Google Drive folder
-`Website - benbe.org`; commit only small web-ready exports here.
+`Website - benbe.org`; local brand-system and asset staging lives at
+`~/Projects/bench-beacon/brand`. Commit only small reviewed web-ready exports here.
+
+## Brand System
+
+Use `~/Projects/bench-beacon/brand` as the source of truth before creating or
+changing visual design.
+
+- Vendor `brand/system/css/colors_and_type.css` into this deploy repo when the
+  site needs the active tokens. This is explicitly approved even though the file
+  exceeds the usual 300-line review threshold.
+- Use reviewed exports from `brand/assets/**/exports/`; do not copy archive
+  files directly into production.
+- The public landing page should use the light cream-paper brand surface by
+  default. Reserve `workbench` mode for product/agent panels and `observatory`
+  mode for media/title-card moments.
 
 ## Deployment
 
@@ -44,4 +59,3 @@ Deploy from this repo root:
 ```bash
 vercel --prod --yes --scope kenny-lius-projects-3a563320
 ```
-

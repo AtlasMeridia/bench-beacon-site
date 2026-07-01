@@ -12,3 +12,7 @@
 *.m4a
 *.wav
 *.mov
+
+# Private personal diagnostic — must NOT deploy to the public site.
+# (Remove this line only if you deliberately want it published at benbe.org/human-evaluation/.)
+human-evaluation/

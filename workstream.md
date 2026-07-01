@@ -4,12 +4,14 @@ This is the handoff note for ongoing `benbe.org` landing-page work.
 
 ## Current State
 
-- The deployable site lives in `~/Projects/bench-beacon-site`.
+- The deployable site lives in `~/Projects/bench-beacon/site`.
 - Vercel project: `bench-beacon`.
 - Vercel root directory: `.`.
 - Public URL currently verified: `https://www.benbe.org`.
 - Current implementation is static HTML/CSS with no build step.
-- Brand mark lives at `assets/bench-beacon-mark.svg`.
+- Active brand CSS is vendored at `assets/brand/colors_and_type.css`.
+- Reviewed brand exports live under `assets/brand/`.
+- Local brand workspace lives at `~/Projects/bench-beacon/brand`.
 - Master/collaboration assets live in Drive:
   `Website - benbe.org`.
 
@@ -36,10 +38,15 @@ Improve next:
 
 - Treat every file here as public.
 - Do not add raw transcripts, recordings, private attendee details, or secrets.
-- Keep files under 300 lines unless Kenny explicitly approves the larger file.
+- Prefer files under 300 lines when practical; 300+ lines are a review trigger,
+  not a hard stop. The active brand CSS is explicitly approved for vendoring
+  as-is.
 - Use `README.md` for deployment facts.
 - Use this file for design direction, backlog, and handoffs.
-- Keep private infrastructure notes in `bench-beacon-ops`, not here.
+- Use `~/Projects/bench-beacon/brand` for design-system source, logos, marks,
+  illustrations, and mockups; copy only reviewed web-ready exports here.
+- Use the light cream-paper surface for the public landing page by default.
+- Keep private infrastructure notes in `~/Projects/bench-beacon/ops`, not here.
 
 ## Verification
 

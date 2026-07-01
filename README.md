@@ -5,6 +5,10 @@ Static first-pass landing page for `benbe.org`.
 For ongoing design work, start with
 [`workstream.md`](./workstream.md).
 
+The active Bench & Beacon brand source lives outside this deploy repo at
+`~/Projects/bench-beacon/brand`; reviewed CSS/assets are vendored into
+`assets/brand/` when used by the static site.
+
 ## Vercel Settings
 
 - Project name: `bench-beacon`
@@ -29,6 +33,6 @@ For ongoing design work, start with
 Deploy manually from the repo root:
 
 ```bash
-cd /Users/atlas/Projects/bench-beacon-site
+cd /Users/atlas/Projects/bench-beacon/site
 vercel --prod --yes --scope kenny-lius-projects-3a563320
 ```
