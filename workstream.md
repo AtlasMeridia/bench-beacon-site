@@ -14,6 +14,8 @@ This is the handoff note for ongoing `benbe.org` landing-page work.
 - Local brand workspace lives at `~/Projects/bench-beacon/brand`.
 - Master/collaboration assets live in Drive:
   `Website - benbe.org`.
+- Paper cleanup comp:
+  `https://app.paper.design/file/01KWG0V1M2FV7NXM9KAJ2JK4VQ`.
 
 ## Design Direction
 
@@ -33,6 +35,16 @@ Improve next:
 - Add one better visual asset if it helps explain the work.
 - Make the session archive easier to browse once public sessions are selected.
 - Add a small credibility/proof section from real session outputs.
+
+2026-07-01 cleanup pass:
+
+- Primary CTA is the working session.
+- Secondary CTA stays internal to the page: `See the method`.
+- Hero promise is now artifact-led: messy AI work becomes a cleaned packet and
+  smaller next action.
+- BenBe is framed as a bounded demo surface, not the whole offer.
+- The first viewport includes a visible session-packet panel so the artifact is
+  obvious before scrolling.
 
 ## Working Rules
 
@@ -57,6 +69,15 @@ Before redeploying:
 3. Confirm no horizontal overflow.
 4. Confirm logo/assets load.
 5. Confirm the live links still point where intended.
+
+Last local verification: 2026-07-01.
+
+- Served from `http://127.0.0.1:4173/`.
+- In-app browser screenshots checked at 1440x900 and 390x844.
+- No horizontal overflow at either viewport.
+- No browser console warnings or errors.
+- Link HEAD checks: Cal.com 200, GitHub archive/session links 200,
+  `chat.benbe.org` 302 to Cloudflare Access.
 
 After deploy:
 
