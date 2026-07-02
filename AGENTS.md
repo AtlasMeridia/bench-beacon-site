@@ -18,7 +18,7 @@ Keep this repo focused on the deployable public website:
 Project memory, session notes, offer work, and broader Bench & Beacon context
 belong in the AtlasCortex vault bundle at:
 
-`~/Vaults/AtlasCortex/VENTURE/business-dev/bench-beacon/`
+`~/Vaults/AtlasCortex/VENTURE/bench-beacon/`
 
 ## Safety
 
