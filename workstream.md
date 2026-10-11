@@ -50,9 +50,9 @@ Improve next:
 
 - Treat every file here as public.
 - Do not add raw transcripts, recordings, private attendee details, or secrets.
-- Prefer files under 300 lines when practical; 300+ lines are a review trigger,
-  not a hard stop. The active brand CSS is explicitly approved for vendoring
-  as-is.
+- Keep files focused. For docs and text artifacts, treat ~500 lines as a review
+  threshold and ~800 lines as a shape check. The active brand CSS is explicitly
+  approved for vendoring as-is.
 - Use `README.md` for deployment facts.
 - Use this file for design direction, backlog, and handoffs.
 - Use `~/Projects/bench-beacon/brand` for design-system source, logos, marks,
